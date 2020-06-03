@@ -1,20 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Bianca
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ <ion-item>
+   <ion-labem>Nome: </ion-labem>
+   <ion-input clearInput [(ngModel)]="nome"></ion-input>
+ </ion-item>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+ <ion-item>
+ <ion-labem>Idade: </ion-labem>
+ <ion-input type="number" [(ngModel)]="idade"></ion-input>
+</ion-item>
+
+<ion-button expand="block" (click)="saudacao()">Saudação</ion-button>
+<ion-button expand="block" (click)="anoDeNascimento()">Ano de Nascimento</ion-button>
+
+
+<br>
+  <p><strong>Nome digitado: </strong> {{ nome }}</p>
+  <p><strong>Idade digitada: </strong> {{ idade }}</p>
+
+  <p>{{ mensagem }}</p>
+  <p>{{ situacao }}</p>
+
+  <p><strong>Ano de nascimento: </strong>{{ anoNascimento }}</p>
+
 </ion-content>
